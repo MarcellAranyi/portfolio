@@ -1,0 +1,232 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.hatter{
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(képek/hatter.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.menu {
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+.menu ul li a {
+	text-decoration: none;
+	color: whitesmoke;
+	text-transform: uppercase;
+	}
+.menu ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: red;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	transition: 0.5s;
+}
+.menu ul li:hover::after{
+	width: 100%;
+}
+.kezdolap{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: whitesmoke;
+}
+.kezdolap h1{
+	font-size: 70px;
+	margin-top: 80px;
+}
+.kezdolap p{
+	margin: 20px auto;
+	font-weight: 100;
+	line-height: 25px;
+}
+.magamrol{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	color: whitesmoke;
+}
+
+.magamrol h1{
+	font-size: 55px;
+	margin:  50px auto 30px auto;
+}
+
+.magamrol p{
+	margin: 20px auto;
+	font-weight: 100;
+	line-height: 25px;
+}
+
+.sor{
+	display: flex;
+	justify-content: space-between;
+	color: whitesmoke;
+	background: black;
+}
+
+.kartyak{
+	flex-basis: 47%;
+	background: rgb(53,65,20);
+	margin: 5%;
+	padding: 20px 12px;
+	border-radius: 16px 16px 5px 5px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+h2{
+	text-align: center;
+	font-size: 25px;
+	padding: 3%;
+	text-transform: uppercase;
+}
+.kartyak:hover{
+	box-shadow: 0px 0px 20px 0px red;
+}
+
+@media(max-width: 700px){
+	.sor{
+	flex-direction: column;
+	}
+}
+
+.kepek{
+	background-color: black;
+}
+
+.fotoosszes{
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: auto;
+}
+
+.fotok{
+	flex-basis: 48%;
+	text-align: center;
+	border-radius: 7px;
+	margin-bottom: 20px;
+	color: whitesmoke;
+	position: relative;
+}
+.fotok img{
+	width: 100%;
+	border-radius: 7px;
+}
+.piros{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	border-radius: 7px;
+	cursor: pointer;
+	background: linear-gradient(rgba(0, 0, 0, 0.5),red);
+	opacity: 0;
+	transition: 0.5s;
+}
+.fotok:hover .piros{
+	opacity: 1;
+}
+
+.reszletek{
+	width: 80%;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	opacity: 0;
+	transform: translateX(-50%);
+	transition: 1s;
+}
+hr{
+	background: whitesmoke;
+	height: 2px;
+	border: 0;
+	margin: 15px auto;
+	width: 60%;
+}
+.reszletek p{
+	font-size: 14px;
+}
+.fotok:hover .reszletek{
+	bottom: 40%;
+	opacity: 1;
+}
+@media(max-width: 700px){
+	.fotok{
+		flex-basis: 100%;
+		margin-bottom: 30px;
+	}
+	.reszletek p{
+	font-size: 12px;
+	}
+	hr{
+		margin: 5px auto;
+	}
+.fotok:hover .reszletek{
+	bottom: 40% !important;
+}
+}
+.lablec{
+	padding: 15px 0 15px;
+	background: grey;
+}
+.kontakt{
+	color: whitesmoke;
+	flex-basis: 45%;
+	padding: 10px;
+	margin-bottom: 12px;
+	text-align: center;
+	font-size: 20px;
+	opacity: 0.4;
+	transition: 0.5s;
+}
+.lablec:hover .kontakt{
+	font-size: 25px;
+	opacity: 1;
+	color: black;
+}
+
+.dokumentaciostervek{
+	background: rgba(0, 0, 0, 0.7);
+	padding: 20px;
+}
+.tervek{
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: auto;
+	color: whitesmoke;
+}
+
+.tervezes{
+	flex-basis: 48%;
+	text-align: center;
+	border-radius: 7px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.tervezes img{
+	width: 100%;
+	border-radius: 5px;
+}
